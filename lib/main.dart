@@ -1,8 +1,4 @@
-// **********************************************************************************************
-// main.dart
-// Punto de entrada de la aplicación. Configura GetX, el tema y las rutas iniciales.
-// Todos los textos visibles y comentarios están en español; nombres de clases/variables en inglés.
-// **********************************************************************************************
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +9,7 @@ import 'pages/routines_page.dart';
 import 'theme/app_theme.dart';
 
 void main() {
-  // Inyectamos el controlador principal con GetX para manejar rutinas y navegación.
+  
   Get.put(RoutineController(), permanent: true);
 
   runApp(const GymApp());

@@ -1,8 +1,3 @@
-// **********************************************************************************************
-// routines_data.dart
-// Fuente de datos estática con 3 rutinas: Zona superior, Core (abdomen), Zona inferior.
-// Cada rutina incluye 2 ejercicios de cardio (15 min) y 6 ejercicios de fuerza para la zona.
-// **********************************************************************************************
 
 import '../../models/exercise.dart';
 import '../../models/routine.dart';
@@ -13,7 +8,7 @@ class RoutinesData {
     description:
         'Entrena pecho, espalda, hombros y brazos para mejorar fuerza y postura.',
     exercises: const [
-      // --- Cardio (15 min) ---
+      
       Exercise(
         title: 'Caminadora',
         description: 'Cardio continuo a ritmo moderado (mantén conversación).',
@@ -27,7 +22,7 @@ class RoutinesData {
         type: ExerciseType.cardio,
         minutes: 15,
       ),
-      // --- Fuerza (6 ejercicios) ---
+      
       Exercise(
         title: 'Press de banca',
         description: 'Trabaja pecho y tríceps. Controla la bajada y empuja fuerte.',
@@ -72,7 +67,7 @@ class RoutinesData {
     description:
         'Fortalece abdomen y zona media para estabilidad, rendimiento y prevención de lesiones.',
     exercises: const [
-      // --- Cardio (15 min) ---
+    
       Exercise(
         title: 'Caminadora (inclinación ligera)',
         description:
@@ -87,7 +82,7 @@ class RoutinesData {
         type: ExerciseType.cardio,
         minutes: 15,
       ),
-      // --- Fuerza (6 ejercicios) ---
+      
       Exercise(
         title: 'Plancha frontal',
         description: 'Alinea cuerpo y evita hundir la zona lumbar.',
@@ -132,7 +127,7 @@ class RoutinesData {
     description:
         'Entrena glúteos, cuádriceps, isquios y pantorrillas para fuerza y potencia.',
     exercises: const [
-      // --- Cardio (15 min) ---
+      
       Exercise(
         title: 'Caminadora (ritmo moderado)',
         description: 'Enfocado en elevar temperatura y preparar piernas.',
@@ -145,7 +140,7 @@ class RoutinesData {
         type: ExerciseType.cardio,
         minutes: 15,
       ),
-      // --- Fuerza (6 ejercicios) ---
+      
       Exercise(
         title: 'Sentadillas',
         description: 'Profundidad cómoda, rodillas alineadas con puntas.',

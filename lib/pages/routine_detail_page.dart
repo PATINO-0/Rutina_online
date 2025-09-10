@@ -1,8 +1,4 @@
-// **********************************************************************************************
-// routine_detail_page.dart
-// Muestra la rutina seleccionada con secciones de Cardio (2 x 15 min) y Fuerza (6 ejercicios).
-// Incluye botón "Volver" (en AppBar) y "Finalizar rutina" (abajo).
-// **********************************************************************************************
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,11 +14,11 @@ class RoutineDetailPage extends GetView<RoutineController> {
 
   @override
   Widget build(BuildContext context) {
-    // Recibimos la rutina por argumentos o desde el controlador
+    
     final Routine routine =
         (Get.arguments is Routine ? Get.arguments : controller.selectedRoutine.value) as Routine;
 
-    // Separamos cardio y fuerza para secciones claras
+    
     final List<Exercise> cardio =
         routine.exercises.where((e) => e.type == ExerciseType.cardio).toList();
     final List<Exercise> strength =
@@ -40,7 +36,7 @@ class RoutineDetailPage extends GetView<RoutineController> {
       ),
       body: Column(
         children: [
-          // Encabezado descriptivo
+          
           Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 10),
@@ -52,7 +48,7 @@ class RoutineDetailPage extends GetView<RoutineController> {
             ),
           ),
 
-          // Lista desplazable con las dos secciones
+          
           Expanded(
             child: ListView(
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
@@ -62,14 +58,14 @@ class RoutineDetailPage extends GetView<RoutineController> {
                 const SizedBox(height: 16),
                 _SectionHeader(title: 'Fuerza (6 ejercicios)'),
                 ...strength.map((e) => ExerciseTile(exercise: e)),
-                const SizedBox(height: 80), // espacio para botón inferior
+                const SizedBox(height: 80), 
               ],
             ),
           ),
         ],
       ),
 
-      // Botón inferior "Finalizar rutina"
+      
       bottomSheet: Container(
         color: AppTheme.black,
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
@@ -84,8 +80,8 @@ class RoutineDetailPage extends GetView<RoutineController> {
               confirmTextColor: Colors.white,
               buttonColor: AppTheme.red,
               onConfirm: () {
-                Get.back(); // cierra el diálogo
-                Get.back(); // vuelve a la lista de rutinas
+                Get.back(); 
+                Get.back(); 
               },
             );
           },
@@ -104,7 +100,7 @@ class _SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // Línea roja como acento
+        
         Container(
           width: 6,
           height: 24,

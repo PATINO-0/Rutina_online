@@ -1,7 +1,3 @@
-// **********************************************************************************************
-// exercise_tile.dart
-// Fila reutilizable para ejercicios con casilla "hecho" (check) y detalles.
-// **********************************************************************************************
 
 import 'package:flutter/material.dart';
 import '../models/exercise.dart';
@@ -16,7 +12,7 @@ class ExerciseTile extends StatefulWidget {
 }
 
 class _ExerciseTileState extends State<ExerciseTile> {
-  // Estado local para marcar un ejercicio como completado (decorativo)
+  
   bool done = false;
 
   @override
@@ -25,12 +21,12 @@ class _ExerciseTileState extends State<ExerciseTile> {
 
     return Card(
       child: ListTile(
-        // Título del ejercicio (en español para el usuario)
+        
         title: Text(
           widget.exercise.title,
           style: Theme.of(context).textTheme.titleMedium,
         ),
-        // Subtítulo con descripción + duración o series/reps
+        
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 4.0),
           child: Text(
@@ -41,7 +37,7 @@ class _ExerciseTileState extends State<ExerciseTile> {
           ),
         ),
         trailing: Checkbox(
-          // Casilla para marcar "hecho"
+          
           value: done,
           onChanged: (val) => setState(() => done = val ?? false),
           activeColor: AppTheme.red,

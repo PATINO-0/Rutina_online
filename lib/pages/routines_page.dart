@@ -1,8 +1,3 @@
-// **********************************************************************************************
-// routines_page.dart
-// Lista las rutinas disponibles (superior, core, inferior) con breves descripciones.
-// Incluye botón para volver atrás en AppBar.
-// **********************************************************************************************
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,7 +23,7 @@ class RoutinesPage extends GetView<RoutineController> {
         ),
       ),
       body: Obx(
-        // Obx para reaccionar ante cambios en la lista (aunque es estática)
+        
         () => ListView.builder(
           padding: const EdgeInsets.only(bottom: 24),
           itemCount: controller.routines.length,
@@ -46,7 +41,7 @@ class RoutinesPage extends GetView<RoutineController> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Indicador/acento rojo para estética
+                      
                       Container(
                         width: 6,
                         height: 64,
